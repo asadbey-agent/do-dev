@@ -1,0 +1,27 @@
+[tasks.help]
+description = "Show available do/mise tasks"
+run = "mise tasks"
+
+[tasks.setup]
+description = "Prepare the demo environment"
+run = "./scripts/setup.sh"
+
+[tasks.dev]
+description = "Run the tiny demo app"
+run = "./scripts/dev.sh"
+
+[tasks.validate]
+description = "Run quick repository validation checks"
+run = "./scripts/validate.sh"
+
+[tasks.lint]
+description = "Run lightweight shell linting"
+run = "./scripts/lint.sh"
+
+[tasks.test]
+description = "Run smoke tests for the do wrapper and tasks"
+run = "./scripts/test.sh"
+
+[tasks.ci]
+description = "Run the local CI pipeline"
+run = "./scripts/ci.sh"
