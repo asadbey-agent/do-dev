@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  do-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install mise
+        uses: jdx/mise-action@v2
+
+      - name: Setup repo workspace
+        run: mise run setup
+
+      - name: Build do command
+        run: mise run install
+
+      - name: Add do to PATH
+        run: echo "$PWD/bin" >> "$GITHUB_PATH"
+
+      - name: Run CI
+        run: command do ci

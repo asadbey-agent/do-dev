@@ -3,4 +3,4 @@ set -euo pipefail
 
 bash tests/smoke_test.sh
 
-echo "[test] smoke tests passed"
+printf '[test] smoke tests passed\n'

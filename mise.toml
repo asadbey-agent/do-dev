@@ -1,3 +1,6 @@
+[tools]
+go = "1.24"
+
 [tasks.help]
 description = "Show available do/mise tasks"
 run = "mise tasks"
@@ -5,6 +8,14 @@ run = "mise tasks"
 [tasks.setup]
 description = "Prepare the demo environment"
 run = "./scripts/setup.sh"
+
+[tasks.install]
+description = "Build the Go-based do command into ./bin/do"
+run = "./scripts/install.sh"
+
+[tasks.doctor]
+description = "Check the local toolchain and repo assumptions"
+run = "./scripts/doctor.sh"
 
 [tasks.dev]
 description = "Run the tiny demo app"
@@ -15,12 +26,16 @@ description = "Run quick repository validation checks"
 run = "./scripts/validate.sh"
 
 [tasks.lint]
-description = "Run lightweight shell linting"
+description = "Run lightweight shell and Go lint checks"
 run = "./scripts/lint.sh"
 
 [tasks.test]
-description = "Run smoke tests for the do wrapper and tasks"
+description = "Run smoke tests for the do command and tasks"
 run = "./scripts/test.sh"
+
+[tasks.clean]
+description = "Remove generated demo artifacts"
+run = "./scripts/clean.sh"
 
 [tasks.ci]
 description = "Run the local CI pipeline"

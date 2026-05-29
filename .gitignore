@@ -1,6 +1,7 @@
 # macOS/Linux shell noise
 .DS_Store
 
-# temporary outputs
+# generated outputs
 *.out
+/bin/
 /tmp/

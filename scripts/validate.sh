@@ -1,12 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "[validate] checking required files"
+printf '[validate] checking required files\n'
 [ -f README.md ]
+[ -f go.mod ]
 [ -f mise.toml ]
-[ -x ./do ]
+[ -f cmd/do/main.go ]
+[ -f scripts/setup.sh ]
+[ -f scripts/install.sh ]
+[ -f scripts/doctor.sh ]
+[ -f scripts/dev.sh ]
+[ -f scripts/lint.sh ]
 [ -f scripts/test.sh ]
-[ -f scripts/validate.sh ]
+[ -f scripts/clean.sh ]
 [ -f tests/smoke_test.sh ]
+[ -f .github/workflows/ci.yml ]
 
-echo "[validate] all required files are present"
+printf '[validate] all required files are present\n'
