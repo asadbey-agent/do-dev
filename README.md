@@ -69,35 +69,6 @@ command do help
 command do test
 ```
 
-## Repo layout
-
-```text
-.
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-├── bin/
-│   └── do                 # built artifact, not committed
-├── cmd/
-│   └── do/
-│       └── main.go
-├── go.mod
-├── mise.toml
-├── scripts/
-│   ├── ci.sh
-│   ├── clean.sh
-│   ├── dev.sh
-│   ├── doctor.sh
-│   ├── install.sh
-│   ├── lint.sh
-│   ├── setup.sh
-│   ├── test.sh
-│   └── validate.sh
-├── tests/
-│   └── smoke_test.sh
-└── tmp/
-```
-
 ## Design rules
 
 ### 1. `mise.toml` is the backbone
